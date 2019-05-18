@@ -1,3 +1,17 @@
+#hBox {
+    -fx-background-color: lightgray;
+    -fx-padding: 25px;
+}
+#partsGrid {
+    -fx-background-color: lightgray;
+    -fx-padding: 15px;
+    -fx-alignment: TOP_LEFT;
+}
+#productsGrid {
+    -fx-background-color: lightgray;
+    -fx-padding: 15px;
+    -fx-alignment: TOP_RIGHT;
+}
 #frmHeaderLabel {
     -fx-font: 20px "Arial";
     -fx-text-fill: darkblue;
