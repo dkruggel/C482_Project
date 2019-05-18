@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InventorySystem",
+            "request": "launch",
+            "mainClass": "inventorysystem.InventorySystem",
+            "projectName": "project_8b6d650a"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InventorySystem",
+            "request": "launch",
+            "mainClass": "inventorysystem.InventorySystem",
+            "projectName": "project_93c7f1c6"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InventorySystem",
+            "request": "launch",
+            "mainClass": "inventorysystem.InventorySystem"
+        }
+    ]
+}
