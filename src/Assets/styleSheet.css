@@ -1,16 +1,14 @@
+#scene {
+    -fx-background-color: lightgray;
+}
 #hBox {
     -fx-background-color: lightgray;
     -fx-padding: 25px;
 }
-#partsGrid {
+#mainGrid {
     -fx-background-color: lightgray;
     -fx-padding: 15px;
-    -fx-alignment: TOP_LEFT;
-}
-#productsGrid {
-    -fx-background-color: lightgray;
-    -fx-padding: 15px;
-    -fx-alignment: TOP_RIGHT;
+    -fx-alignment: CENTER;
 }
 #frmHeaderLabel {
     -fx-font: 20px "Arial";

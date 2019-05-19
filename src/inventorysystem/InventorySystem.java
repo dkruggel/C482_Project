@@ -2,15 +2,12 @@ package inventorysystem;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-//import javafx.scene.control.TextField;
-//import javafx.scene.text.Font;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -26,17 +23,14 @@ public class InventorySystem extends Application {
 
         root.setTop(hbox);
 
-        GridPane partsGrid = new GridPane();
-        partsGrid.setId("partsGrid");
-        partsGrid.setHgap(10);
-        partsGrid.setVgap(10);
-        GridPane productsGrid = new GridPane();
-        productsGrid.setId("productsGrid");
-        productsGrid.setHgap(10);
-        productsGrid.setVgap(10);
-        
-        root.setLeft(partsGrid);
-        root.setRight(productsGrid);
+        GridPane mainGrid = new GridPane();
+        mainGrid.setId("mainGrid");
+        mainGrid.setHgap(10);
+        mainGrid.setVgap(10);
+        mainGrid.setHgap(10);
+        mainGrid.setVgap(10);
+
+        root.setCenter(mainGrid);
 
         Scene scene = new Scene(root, 1000, 500);
         scene.getStylesheets().add("/Assets/styleSheet.css");
@@ -61,24 +55,23 @@ public class InventorySystem extends Application {
         productsHeaderLabel.setId("productsHeaderLabel");
 
         //Text boxes
-        //TextField partsSearchTextField = new TextField();
-        //TextField productsSearchTextField = new TextField();       
+        TextField partsSearchTextField = new TextField();
+        TextField productsSearchTextField = new TextField();       
 
         hbox.getChildren().add(frmHeaderLabel);
         
-        partsGrid.add(partsHeaderLabel,1,4,3,1);
-        partsGrid.add(partsSearchBtn,5,4,3,1);
-        //mainGrid.add(partsSearchTextField,7,4);
+        mainGrid.add(partsHeaderLabel,0,0,1,1);
+        mainGrid.add(partsSearchBtn,6,0,3,1);
+        mainGrid.add(partsSearchTextField,10,0);
 
-        productsGrid.add(productsHeaderLabel,10,4);
-        productsGrid.add(productsSearchBtn,16,4);
-        //mainGrid.add(productsSearchTextField,18,4);
+        mainGrid.add(productsHeaderLabel,25,0,1,1);
+        mainGrid.add(productsSearchBtn,31,0,3,1);
+        mainGrid.add(productsSearchTextField,35,0);
 
-        partsGrid.setGridLinesVisible(true);
-        productsGrid.setGridLinesVisible(true);
+        mainGrid.setGridLinesVisible(true);
         
-        //partsSearchBtn.setOnAction(event->
-        //       System.out.println("Hello World"));      
+        partsSearchBtn.setOnAction(event->
+               partsHeaderLabel.setText("Changed!"));      
                                
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
